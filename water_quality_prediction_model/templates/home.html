@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            align-content: center;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Add padding to containers */
+        .container {
+            padding: 16px;
+            background-color: rgb(42, 134, 253);
+
+        }
+
+        .data {
+            background-color: rgb(180, 211, 250);
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px;
+            width: 400px;
+            margin-left: 37%;
+        }
+
+        button {
+            padding: 10px;
+            background-color: black;
+            color: rgb(42, 134, 253);
+            border-radius: 10px;
+            font-size: 20px;
+
+        }
+
+
+        /* Full-width input fields */
+        input {
+            width: 100%;
+            padding: 20px;
+            margin: 10px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        input:focus {
+            background-color: #ddd;
+            outline: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            box-shadow: 10px 10px 20px;
+
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            width: 380px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="result" method="post">{% csrf_token %}
+        <div class="container">
+            <h1>WATER QUALITY PREDICTION MODEL</h1>
+
+            <div class="data">
+                <h2>ph of water sample - <br>(0.0 to 13.99)</h2>
+                <label for="ph"><b>RM Value</b></label>
+                <br>
+                <input type="number" step="0.0000001" placeholder="Enter Value" name="Ph" id="ph" required>
+            </div>
+
+            <div class="data">
+                <h2>Hardness of water sample - <br>(47.43 to 323.12)</h2>
+                <label for="HRD"><b>PT Ratio</b></label>
+                <br>
+                <input type="number" step="0.0000001" placeholder="Enter Value" name="Hardness" id="HRD" required>
+            </div>
+
+            <div class="data">
+                <h2>Total dissolved solids - <br>(320.94, 61227.19)</h2>
+                <label for="TDS"><b>LSTAT Value</b></label>
+                <br>
+                <input type="number" step="0.0000001" placeholder="Enter Value" name="Solids" id="TDS" required>
+            </div>
+
+            <div class="data">
+                <h2>Chloramines in water sample-<br>(0.35, 13.12)</h2>
+                <label for="Chloramines"><b>LSTAT Value</b></label>
+                <br>
+                <input type="number" step="0.0000001" placeholder="Enter Value" name="Chloramines" id="Chloramines"
+                    required>
+            </div>
+
+            <div class="data">
+                <h2>Sulphate in water sample- <br>(129.00, 481.03)</h2>
+                <label for="Sulphate"><b>LSTAT Value</b></label>
+                <br>
+                <input type="number" step="0.0000001" placeholder="Enter Value" name="Sulfate" id="Sulphate" required>
+            </div>
+
+            <div class="data">
+                <h2>conductivity in water sample - <br>(181.48, 753.34)</h2>
+                <label for="conductivity"><b>LSTAT Value</b></label>
+                <input type="number" step="0.0000001" placeholder="Enter Value" name="Conductivity" id="conductivity"
+                    required>
+            </div>
+
+            <div class="data">
+                <h2>Organic_carbon in water sample - <br>(2.19, 28.30)</h2>
+                <label for="Organic_carbon"><b>LSTAT Value</b></label>
+                <br>
+                <input type="number" step="0.0000001" placeholder="Enter Value" name="Organic_carbon"
+                    id="Organic_carbon" required>
+            </div>
+
+            <div class="data">
+                <h2>Trihalomethanes in water sample - <br>(0.73, 124.0)</h2>
+                <label for="Trihalomethanes"><b>LSTAT Value</b></label>
+                <br>
+                <input type="number" step="0.0000001" placeholder="Enter Value" name="Trihalomethanes"
+                    id="Trihalomethanes" required>
+            </div>
+
+            <div class="data">
+                <h2>Turbidity in water sample- <br>(1.45, 6.739)</h2>
+                <label for="Turbidity"><b>LSTAT Value</b></label>
+                <br>
+                <input type="number" step="0.0000001" placeholder="Enter Value" name="Turbidity" id="Turbidity"
+                    required>
+                <div>
+                    
+                </div>
+                <button type="submit" class="registerbtn"><b>Submit</b></button>
+    </form>
+
+</body>
+
+</html>
